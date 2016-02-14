@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    android:id="@+id/wrapper">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.thirtytwostudios.miit.MapsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            tools:context="com.thirtytwostudios.miit.MapsActivity"
+            android:layout_above="@+id/submitButton"
+            android:layout_gravity="top"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:text="Freunde"
+            android:id="@+id/submitButton"
+            android:layout_gravity="center_horizontal|bottom"
+            android:onClick="linktofriends"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="false" />
+
+</RelativeLayout>

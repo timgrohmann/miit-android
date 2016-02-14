@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Miit</string>
+    <string name="title_activity_maps">Miit</string>
+    <string name="title_activity_friends">Freunde</string>
+    <string name="facebook_app_id">1635539823367357</string>
+    <string-array name="friends">
+        <item>Claus</item>
+        <item>Peter</item>
+    </string-array>
+    <string name="baseurl">https://miit.api.32studios.de/v1.1/</string>
+    <string name="nofriends">Du hast keine Freunde. Suche Miiter über den ADD-Button!</string>
+    <string name="action_settings">Einstellungen</string>
+</resources>
