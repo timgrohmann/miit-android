@@ -1,6 +1,7 @@
 package com.thirtytwostudios.miit;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -34,13 +35,13 @@ import org.json.JSONObject;
  * Created by timgrohmann on 13.02.16.
  */
 public class ServerConnection extends AsyncTask< ArrayList<ArrayList<String>>, Void, JSONObject> {
-    Activity a;
+    Context c;
 
-    public ServerConnection(Activity activity) {
-        this.a = activity;
+    public ServerConnection(Context context) {
+        this.c = context;
     }
     public String downloadFromUrl(String node, ArrayList<ArrayList<String>> request) throws IOException {
-        String urlstring = this.a.getResources().getString(R.string.baseurl) + node;
+        String urlstring = this.c.getResources().getString(R.string.baseurl) + node;
         InputStream is = null;
         if (AccessToken.getCurrentAccessToken() == null){
             return "";

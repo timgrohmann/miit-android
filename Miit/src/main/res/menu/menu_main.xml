@@ -4,4 +4,9 @@
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
+    <item android:id="@+id/action_FriendShipRequest"
+        android:title="Freundschaftsanfragen"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/friendicon"
+        android:visible="false"/>
 </menu>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="20dp">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -10,13 +12,15 @@
         android:layout_centerHorizontal="true"
         android:padding="10dp">
 
-        <com.facebook.login.widget.ProfilePictureView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/profilePictureView"
             android:background="#eee"
             android:layout_weight="3"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            fresco:roundAsCircle="true"
+            fresco:viewAspectRatio="1"/>
 
         <LinearLayout
             android:orientation="vertical"
@@ -42,5 +46,15 @@
                 android:text="name"
                 android:id="@+id/realnametxtfield" />
         </LinearLayout>
+
     </LinearLayout>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

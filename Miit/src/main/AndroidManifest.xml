@@ -18,7 +18,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/MiitTheme" >
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -45,14 +45,7 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
         </fragment>
-        <activity
-            android:name="com.thirtytwostudios.miit.FriendsActivity"
-            android:label="@string/title_activity_friends"
-            android:parentActivityName="com.thirtytwostudios.miit.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.thirtytwostudios.miit.FriendsActivity" />
-        </activity>
+
         <activity android:name="com.facebook.FacebookActivity"
             android:configChanges=
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -60,9 +53,11 @@
             android:label="@string/app_name" />
         <activity android:name="com.thirtytwostudios.miit.SettingsActivity"
             android:label="Einstellungen"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" />
 
-        </activity>
+        <activity android:name="com.thirtytwostudios.miit.FriendshipRequestsActivity"
+            android:label="Freundschaftsanfragen"
+            android:parentActivityName=".MainActivity" />
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
@@ -71,6 +66,8 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
+        <!-- LOCATION SERVICE -->
+        <service android:name=".LocationService" android:process=":miit_location" android:label="Standortdienst Miit"/>
     </application>
 
 </manifest>
